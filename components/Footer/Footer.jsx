@@ -86,7 +86,7 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-          <div className="m-auto sm:m-0 md:ml-auto flex gap-5 items-center">
+          <div className="sm:m-0 md:ml-auto flex gap-5 items-center">
             <Facebook className=" fill-white hover:fill-rose-500 cursor-pointer" />
             <Twitter className=" fill-white hover:fill-rose-500 cursor-pointer" />
           </div>
