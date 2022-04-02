@@ -91,11 +91,7 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-<<<<<<< HEAD
           <div className="md:m-0 md:ml-auto flex gap-5 items-center">
-=======
-          <div className="sm:m-0 md:ml-auto flex gap-5 items-center">
->>>>>>> b882cbb7e48cfb0bcd3d307a502c63792b005885
             <Facebook className=" fill-white hover:fill-rose-500 cursor-pointer" />
             <Twitter className=" fill-white hover:fill-rose-500 cursor-pointer" />
           </div>
