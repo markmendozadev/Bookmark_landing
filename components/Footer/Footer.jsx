@@ -4,13 +4,18 @@ import Bookmark from "../icons/Bookmark";
 import IconError from "../icons/IconError";
 import Twitter from "../icons/Twitter";
 import Facebook from "../icons/Facebook";
-
+const validEmail = (email) => {
+  const regex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+  return regex.test(email);
+};
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
+
   const submitHandler = (e) => {
     e.preventDefault();
-    if (!email || !email.includes("@")) {
+
+    if (!validEmail(email)) {
       setError(true);
       return;
     }
@@ -86,7 +91,7 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-          <div className="m-auto md:ml-auto flex gap-5 items-center">
+          <div className="md:m-0 md:ml-auto flex gap-5 items-center">
             <Facebook className=" fill-white hover:fill-rose-500 cursor-pointer" />
             <Twitter className=" fill-white hover:fill-rose-500 cursor-pointer" />
           </div>

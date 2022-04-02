@@ -1,21 +1,14 @@
 import React from "react";
-import Image from "next/image";
 import Button from "../Button";
 const Card = (props) => {
+  const { Img } = props;
   return (
     <div
       className={`flex flex-col shadow-xl rounded-lg bg-white p-12 md:p-4 ${props.mt} `}
     >
       <div className="p-8">
-        <div className="w-24 m-auto">
-          <Image
-            src={props.img.src}
-            alt={props.altText}
-            width="100%"
-            height="100%"
-          />
-        </div>
-        <h2 className="text-xl font-bold text-secondary text-center">
+        <div className="w-24 m-auto ">{Img}</div>
+        <h2 className="text-xl font-bold text-secondary text-center mt-4">
           {props.title}
         </h2>
         <p className="font-lg mt-4 text-gray-400 ">{props.text}</p>
